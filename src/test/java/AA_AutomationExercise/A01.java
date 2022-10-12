@@ -2,6 +2,7 @@ package AA_AutomationExercise;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -60,8 +61,9 @@ public class A01 {
         WebElement nameBox = driver.findElement(By.xpath("//*[@data-qa='signup-name']"));
         WebElement emailBox = driver.findElement(By.xpath("//*[@data-qa='signup-email']"));
 
+        Thread.sleep(1000);
         nameBox.sendKeys("Bedirhan Erdem");
-        emailBox.sendKeys("yusuaaafi@gmail.com");
+        emailBox.sendKeys("yusuaassg5afi@gmail.com");
 
 
         // 7. Click 'Signup' button
@@ -82,6 +84,7 @@ public class A01 {
         // 9. Fill details: Title, Name, Email, Password, Date of birth
         driver.findElement(By.xpath("//*[@id='password']")).sendKeys("abcdefghijkl");
 
+        Thread.sleep(1000);
         driver.findElement(By.xpath("//*[@id='days']")).sendKeys("25");
         driver.findElement(By.xpath("//*[@id='months']")).sendKeys("5");
         driver.findElement(By.xpath("//*[@id='years']")).sendKeys("1997");
@@ -103,6 +106,7 @@ public class A01 {
         driver.findElement(By.id("first_name")).sendKeys("Ahmet");
         driver.findElement(By.id("last_name")).sendKeys("Erdem");
 
+        Thread.sleep(1000);
         driver.findElement(By.id("company")).sendKeys("Amazon");
 
         driver.findElement(By.id("address1")).sendKeys("Atakum/Samsun");
@@ -119,6 +123,7 @@ public class A01 {
 
 
 
+        Thread.sleep(1000);
 
         driver.findElement(By.id("mobile_number")).sendKeys("5300000000");
 
@@ -139,7 +144,9 @@ public class A01 {
 
 
         // 15. Click 'Continue' button
+        Thread.sleep(1000);
         driver.findElement(By.xpath("//*[@class='btn btn-primary']")).click();
+
 
 
         // 16. Verify that 'Logged in as username' is visible
@@ -156,25 +163,6 @@ public class A01 {
 
         // 18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
 
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
 
 }
